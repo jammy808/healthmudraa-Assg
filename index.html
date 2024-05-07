@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Background</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+  <div id="loading">
+    <video id="video-background" autoplay loop muted>
+      <source src="pre.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <div id="main" style="display: none;" class="bg-yellow-100 h-screen">
+
+    <header class="text-white p-1 lg:p-2 gap-1">
+
+        <div class="flex justify-center items-center gap-1 md:gap-3 lg:gap-5">
+            <div class="flex justify-center items-center gap-1 md:gap-3 lg:gap-4">
+                
+                <div class="menu">
+                 <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+                 <label for="openSidebarMenu" class="sidebarIconToggle">
+                   <div class="spinner diagonal part-1 h-[2px] md:h-[3px] lg:h-[4px]"></div>
+                   <div class="spinner horizontal h-[2px] md:h-[3px] lg:h-[4px]"></div>
+                   <div class="spinner diagonal part-2 h-[2px] md:h-[3px] lg:h-[4px]"></div>
+                 </label>
+                 <div id="sidebarMenu">
+                   <ul class="sidebarMenuInner bg-black h-screen">
+                     
+                     <li><a href="/">Videos </a></li>
+                     <li><a href="/">Services </a></li>
+                     <li><a href="/tvShow">Plans</a></li>
+                     <li><a href="/anime">About</a></li>
+                     <li><a href="/list">Login</a></li>
+                   </ul>
+                 </div>
+     
+                 </div>
+                 
+           </div>
+        </div>
+        
+        <div>
+            <h1 class="text-lg md:text-2xl lg:text-3xl text-blue-800 font-extrabold">health<span class="text-red-800">mudraa</span></h1>
+        </div>
+
+     </header>
+
+    <div id="first" class="h-screen" style="background-size: cover;">
+        <div id="grad" class="">
+            <h1 class="text-center font-black text-5xl md:text-7xl lg:text-8xl text-white pt-64">Your <span id="fill">Health</span> <br>
+            <span id="fill">Our</span> Expertise</h1>
+        </div>
+    </div>
+
+    <div class="">
+
+            <h1 class="text-center font-semibold text-base md:text-lg lg:text-2xl pt-28">At <span class="font-extrabold">HealthMudraa</span>, we provide comprehensive healthcare solutions, including surgery assistance, physiotherapy, nursing, <br>
+            and insurance options—all available through subscription-based services.</h1>
+
+            <div class="flex justify-center mt-10"><input type="text" class="bg-zinc-200 border-2 border-zinc-400 hover:border-zinc-600 rounded p-1 w-[50%]" placeholder="Search">
+                <i class='bx bx-search-alt-2 text-4xl ml-4'></i>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 h-screen">
+
+                <div class=" slide-up bg-black w-[75%] h-[50%] ml-11 mt-5 flex justify-center items-center text-white " id="slide-up-div"> <h1>Video</h1></div>
+                <div class=" slide-up bg-black w-[75%] h-[50%] ml-11 mt-5 flex justify-center items-center text-white " id="slide-up-div"> <h1>Video</h1></div>
+                <div class=" slide-up bg-black w-[75%] h-[50%] ml-11 mt-5 flex justify-center items-center text-white " id="slide-up-div"> <h1>Video</h1></div>
+
+            </div>
+            
+
+    </div>
+
+  </div>
+
+  <script>
+    const loadingPage = document.getElementById('loading');
+    const mainPage = document.getElementById('main');
+    
+    
+    function showMainPage() {
+        loadingPage.style.opacity = 0; 
+        setTimeout(() => {
+        loadingPage.style.display = 'none'; 
+        mainPage.style.display = 'block';
+        }, 1000);
+    }
+    
+    //showMainPage();
+    
+    // document.getElementById('video-background').addEventListener('ended', showMainPage);
+    document.addEventListener("DOMContentLoaded", function(){
+        setTimeout(showMainPage, 2000);
+    })
+    
+
+</script> 
+
+
+</body>
+</html>
